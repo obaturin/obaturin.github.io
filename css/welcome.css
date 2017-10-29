@@ -1,0 +1,147 @@
+.welcome {
+    height: 100vh;
+    min-height: 650px;
+    overflow: hidden;
+    background: url("/img/content/welcome/video-bg.jpg");
+    background-size: cover;
+
+}
+
+.header {
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+
+.logo__img {
+    display: inline-block;
+    /* margin-top: 100px; */
+    margin-right: 225px;
+    vertical-align: middle;
+    
+}
+
+
+.nav {
+    display: inline-block;
+    vertical-align: middle;  
+}
+
+.navigation__item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navigation__link {
+font-family: 'ubuntumedium';
+color: #ffffff;
+font-size: 13px;
+}
+
+.navigation__item:not(:nth-child(1n+6)):after {
+    margin-left: 10px;
+    content: "•";
+    color: #ffffff;
+}
+
+.order__button {
+    font-family: 'ubuntumedium';
+    color: #ffffff;
+    font-size: 13px;
+    margin-left: 5px;
+    background: #e45028;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.navigation__item:not(:last-child):hover {
+    text-decoration: underline;
+}
+
+.vertical-nav {
+    position: fixed;
+    right: 50px;
+    top: 70px;
+    font-size: 0;
+   
+}
+
+.vertical-nav__item {
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    
+}
+
+/* .vertical-nav__link {
+    
+} */
+
+.vertical-nav__item:hover {
+    border: 1px solid #ffffff;
+    
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+.main-foto {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.drops-foto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+}
+
+.burger-foto {
+    margin-top: -55px;
+    margin-left: 45px;
+}
+
+.title {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.main-title {
+    font-family: 'gagalinregular';
+    color: #f9b43b;
+    font-size: 72px;
+}
+
+.sub-title {
+    font-family: 'lifehackmedium';
+    color: #ffffff;
+    font-size: 65px;
+    width: 410px;
+}
+
+.transition__link {
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.transition {
+    text-align: center;
+}
+    /* display: block;
+    text-align: center;
+} */
