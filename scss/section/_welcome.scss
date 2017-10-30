@@ -1,0 +1,111 @@
+.welcome {
+    background-image: url("/img/content/welcome/video-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.header__logo {
+    margin-right: auto;
+}
+
+.nav {
+    margin-right: rem(15px);
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation__item {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    &:after {
+        display: inline-block;
+        vertical-align: middle;
+        content: '';
+        @include circle(5px, #ffffff);
+        margin: 0 12px;
+    }
+    &:last-child:after {
+        display: none;
+    }
+}
+
+.navigation__link {
+    font-family: 'ubuntumedium';
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    transition: .5s;
+        &:hover {
+            text-decoration: underline;
+        }
+}
+
+.welcome__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    padding-bottom: 15%;
+
+}
+
+.main-foto, .welcome__title {
+    flex-basis: 50%;
+    display: flex;
+}
+
+.welcome__title {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title {
+    font-family: 'gagalinregular';
+    color: #f9b43b;
+    font-size: 72px;
+    margin: 0;
+    padding-top: 60px;
+}
+
+.sub-title {
+    font-family: 'lifehackmedium';
+    color: #ffffff;
+    font-size: 65px;
+    // width: 410px;
+    line-height: 1;
+}
+
+
+.transition__link {
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    bottom: 40px;
+}
+
