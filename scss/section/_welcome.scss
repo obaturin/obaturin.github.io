@@ -2,9 +2,11 @@
     background-image: url("/img/content/welcome/video-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-position: center center;
     position: relative;
 }
+
+
 
 .header {
     width: 100%;
@@ -16,6 +18,7 @@
 
 .header__logo {
     margin-right: auto;
+
 }
 
 .nav {
@@ -27,7 +30,7 @@
     padding: 0;
 }
 
-.navigation__item {
+.nav__item {
     display: inline-block;
     vertical-align: middle;
     white-space: nowrap;
@@ -43,7 +46,7 @@
     }
 }
 
-.navigation__link {
+.nav__link {
     font-family: 'ubuntumedium';
     color: #ffffff;
     font-size: 13px;
@@ -63,6 +66,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    // flex: 1;
 }
 
 .welcome__content {
@@ -75,7 +79,7 @@
 
 }
 
-.main-foto, .welcome__title {
+.welcome__main-foto, .welcome__title {
     flex-basis: 50%;
     display: flex;
 }
@@ -85,15 +89,11 @@
     justify-content: center;
 }
 
-.main-title {
-    font-family: 'gagalinregular';
-    color: #f9b43b;
-    font-size: 72px;
-    margin: 0;
+.main-title_welcome {
     padding-top: 60px;
 }
 
-.sub-title {
+.welcome__sub-title {
     font-family: 'lifehackmedium';
     color: #ffffff;
     font-size: 65px;

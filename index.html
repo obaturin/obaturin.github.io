@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Burgers</title>
+    <script src="./js/svg4everybody.js"></script>
+    <script>
+      svg4everybody();
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -16,29 +20,29 @@
                     <header class="header">
                         <div class="header__logo">
                             <a href="#" class="logo__img">
-                                <img src="/img/content/welcome/logo.png" alt="" class="logo__img-pic">
+                                <img src="/img/icons/logo.svg" alt="" class="logo__img-pic">
                             </a>
                         </div>
                         <div class="header__menu">
                             <nav class="nav">
                                 <ul class="nav__list">
-                                    <li class="navigation__item">
-                                        <a href="" class="navigation__link" data-goto="1">о нас</a>
+                                    <li class="nav__item">
+                                        <a href="" class="nav__link" data-goto="1">о нас</a>
                                     </li>
-                                    <li class="navigation__item">
-                                        <a href="" class="navigation__link" data-goto="2">бургеры</a>
+                                    <li class="nav__item">
+                                        <a href="" class="nav__link" data-goto="2">бургеры</a>
                                     </li>
-                                    <li class="navigation__item">
-                                        <a href="" class="navigation__link" data-goto="3">команда</a>
+                                    <li class="nav__item">
+                                        <a href="" class="nav__link" data-goto="3">команда</a>
                                     </li>
-                                    <li class="navigation__item">
-                                        <a href="" class="navigation__link" data-goto="4">меню</a>
+                                    <li class="nav__item">
+                                        <a href="" class="nav__link" data-goto="4">меню</a>
                                     </li>
-                                    <li class="navigation__item">
-                                        <a href="" class="navigation__link" data-goto="5">отзывы</a>
+                                    <li class="nav__item">
+                                        <a href="" class="nav__link" data-goto="5">отзывы</a>
                                     </li>
-                                    <li class="navigation__item">
-                                        <a href="" class="navigation__link" data-goto="7">контакты</a>
+                                    <li class="nav__item">
+                                        <a href="" class="nav__link" data-goto="7">контакты</a>
                                     </li>
                                     <!-- <li class="navigation__item"> -->
                                         <!-- <button class="order__button" data-goto="6">ЗАКАЗАТЬ</button> -->
@@ -52,18 +56,18 @@
                     </header>
                     
                     <div class="welcome__content">
-                        <div class="main-foto">
-                            <img src="/img/content/welcome/burgerwithdrops.png" alt="" class="burgerwithdrops-foto">
+                        <div class="welcome__main-foto">
+                            <img src="/img/content/welcome/burgerwithdrops.png" alt="" class="welcome__main-foto-pic">
                         </div>
                         <div class="welcome__title">
-                                <div class="main-title">МЫ ДЕЛАЕМ</div>
-                                <div class="sub-title">натуральные бургеры</div>
+                                <div class="main-title main-title_welcome">МЫ ДЕЛАЕМ</div>
+                                <div class="welcome__sub-title">натуральные бургеры</div>
                         </div>
                     </div>
                 
                     <div class="transition">
                         <a href="#" class="transition__link">
-                            <img src="/img/content/welcome/arrow-scroll.png" alt="" class="transition__button">
+                            <img src="/img/icons/arrow-scroll.svg" alt="" class="transition__button">
                         </a>
                     </div>
                 </div>    
@@ -73,21 +77,21 @@
                     <div class="main-title main-title_black">МЫ ЛУЧШИЕ</div> 
                     <ul class="best__list">
                         <li class="best__item">
-                            <img src="/img/content/best/meat.png" alt="" class="best__item-pic">
+                            <img src="/img/icons/meat.svg" alt="" class="best__item-pic">
                             <div class="best__item-title">100% свежее мясо</div>
                             <div class="best__item-desc">
                                 Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
                             </div>
                         </li>
                         <li class="best__item">
-                            <img src="/img/content/best/hand.png" alt="" class="best__item-pic">
+                            <img src="/img/icons/hand.svg" alt="" class="best__item-pic">
                             <div class="best__item-title">Ручная сборка</div>
                             <div class="best__item-desc">
                                 Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
                             </div>
                         </li>
                         <li class="best__item">
-                            <img src="/img/content/best/natural.png" alt="" class="best__item-pic">
+                            <img src="/img/icons/natural.svg" alt="" class="best__item-pic">
                             <div class="best__item-title">Натуральные ингредиенты</div>
                             <div class="best__item-desc">
                                     Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
@@ -97,16 +101,97 @@
                 </div>
             </section>
             <section class="section team">
-                
-            </section>
+                <div class="team__container">
+                    <div class="team__content">
+                        <div class="main-title">Команда</div>
+                        <ul class="team-acco">
+                        <li class="team-acco__item">
+                            <a href="#" class="team-acco__trigger">Дэниел Редклифф</a>
+                            <div class="team-acco__content">
+                            <div class="team-acco__pic">
+                                <img class="team-acco__pic-img" src="/img/content/team/member_1.jpg" alt="">
+                            </div>
+                            <div class="team-acco__text">
+                                <div class="team-acco__text-title">Оператор</div>
+                                <div class="team-acco__text-content">
+                                <p>
+                                    С радостью поможет подобрать идеальный бургер и оформить заказ.  
+                                </p>
+                                </div>
+                            </div>
+                            </div>
+                        </li>
+                        <li class="team-acco__item team-acco__item_active">
+                            <a href="#" class="team-acco__trigger">Дэниел Редклифф</a>
+                            <div class="team-acco__content">
+                            <div class="team-acco__pic">
+                                <img class="team-acco__pic-img" src="/img/content/team/member_1.jpg" alt="">
+                            </div>
+                            <div class="team-acco__text">
+                                <div class="team-acco__text-title">Оператор</div>
+                                <div class="team-acco__text-content">
+                                <p>
+                                    С радостью поможет подобрать идеальный бургер и оформить заказ.  
+                                </p>
+                                </div>
+                            </div>
+                            </div>
+                        </li>
+                        <li class="team-acco__item">
+                            <a href="#" class="team-acco__trigger">Дэниел Редклифф</a>
+                            <div class="team-acco__content">
+                            <div class="team-acco__pic">
+                                <img class="team-acco__pic-img" src="/img/content/team/member_1.jpg" alt="">
+                            </div>
+                            <div class="team-acco__text">
+                                <div class="team-acco__text-title">Оператор</div>
+                                <div class="team-acco__text-content">
+                                <p>
+                                    С радостью поможет подобрать идеальный бургер и оформить заказ.  
+                                </p>
+                                </div>
+                            </div>
+                            </div>
+                        </li>
+                        <li class="team-acco__item">
+                            <a href="#" class="team-acco__trigger">Дэниел Редклифф</a>
+                            <div class="team-acco__content">
+                            <div class="team-acco__pic">
+                                <img class="team-acco__pic-img" src="/img/content/team/member_1.jpg" alt="">
+                            </div>
+                            <div class="team-acco__text">
+                                <div class="team-acco__text-title">Оператор</div>
+                                <div class="team-acco__text-content">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nam maxime nisi voluptates rem voluptatum sed eum dolorum,
+                                    ad facilis!
+                                </p>
+                                </div>
+                            </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    </div>
+                </section>
             <section class="section menu">
-                
+                <ul class="menu-accordion__list">
+                    <li class="menu-accordion__item"><img src="/img/content/menu/menu_meat.jpg" alt="" class="menu-accordion__img">
+                        <div class="menu-accordion__title">для мясоедов</div>
+                    </li>
+                    <li class="menu-accordion__item"><img src="/img/content/menu/menu_veget.jpg" alt="" class="menu-accordion__img">
+                        <div class="menu-accordion__title">вегетарианское</div>
+                    </li>
+                    <li class="menu-accordion__item"><img src="/img/content/menu/menu_diet.jpg" alt="" class="menu-accordion__img">
+                        <div class="menu-accordion__title">диетическое</div>
+                    </li>
+                </ul>
             </section>
             <section class="section comments">
                 <!-- <div class="container"> -->
                     <ul class="comments__list">
                         <li class="comments__item">
-                            <div class="comments__img comments__img_1"></div>
+                            <div class="comments__img comments__img_1" style="background-image: url(/img/content/comments/comment1.jpg);"></div>
                             <div class="comments__overlay">
                                 <div class="comments__name">КОНСТАНТИН СПИЛБЕРГ</div>
                                 <div class="comments__desc">
@@ -116,7 +201,7 @@
                             </div>
                         </li>
                         <li class="comments__item">
-                            <div class="comments__img comments__img_2"></div>
+                            <div class="comments__img comments__img_2" style="background-image: url(/img/content/comments/comment2.jpg);"></div>
                             <div class="comments__overlay">
                                 <div class="comments__name">КОНСТАНТИН СПИЛБЕРГ</div>
                                 <div class="comments__desc">
@@ -126,7 +211,7 @@
                             </div>
                         </li>
                         <li class="comments__item">
-                            <div class="comments__img comments__img_3"></div>
+                            <div class="comments__img comments__img_3" style="background-image: url(/img/content/comments/comment3.jpg);"></div>
                             <div class="comments__overlay">
                                 <div class="comments__name">КОНСТАНТИН СПИЛБЕРГ</div>
                                 <div class="comments__desc">
@@ -136,7 +221,7 @@
                             </div>
                         </li>
                         <li class="comments__item">
-                            <div class="comments__img comments__img_4"></div>
+                            <div class="comments__img comments__img_4" style="background-image: url(/img/content/comments/comment4.jpg);"></div>
                             <div class="comments__overlay">
                                 <div class="comments__name">КОНСТАНТИН СПИЛБЕРГ</div>
                                 <div class="comments__desc">
@@ -146,7 +231,7 @@
                             </div>
                         </li>
                         <li class="comments__item">
-                            <div class="comments__img comments__img_5"></div>
+                            <div class="comments__img comments__img_5" style="background-image: url(/img/content/comments/comment5.jpg);"></div>
                             <div class="comments__overlay">
                                 <div class="comments__name">КОНСТАНТИН СПИЛБЕРГ</div>
                                 <div class="comments__desc">
@@ -156,7 +241,7 @@
                             </div>
                         </li>
                         <li class="comments__item">
-                            <div class="comments__img comments__img_6"></div>
+                            <div class="comments__img comments__img_6" style="background-image: url(/img/content/comments/comment6.jpg);"></div>
                             <div class="comments__overlay">
                                 <div class="comments__name">КОНСТАНТИН СПИЛБЕРГ</div>
                                 <div class="comments__desc">
@@ -166,7 +251,7 @@
                             </div>
                         </li>
                         <li class="comments__item">
-                            <div class="comments__img comments__img_7"></div>
+                            <div class="comments__img comments__img_7" style="background-image: url(/img/content/comments/comment7.jpg);"></div>
                             <div class="comments__overlay">
                                 <div class="comments__name">КОНСТАНТИН СПИЛБЕРГ</div>
                                 <div class="comments__desc">
@@ -176,7 +261,7 @@
                             </div>
                         </li>
                         <li class="comments__item">
-                            <div class="comments__img comments__img_8"></div>
+                            <div class="comments__img comments__img_8" style="background-image: url(/img/content/comments/comment8.jpg);"></div>
                             <div class="comments__overlay">
                                 <div class="comments__name">КОНСТАНТИН СПИЛБЕРГ</div>
                                 <div class="comments__desc">
@@ -189,10 +274,157 @@
                 <!-- </div> -->
             </section>
             <section class="section form">
-                
+                <div class="container form__container">
+                    <!-- <div class="main-title main-title_form">закажите доставку</div> -->
+                    <div class="form">
+                        <form action="" class="form__order">
+                            <div class="form__content">
+                                <div class="form__col-left">
+                                    <div class="form__row">
+                                        <label class="form__elem">
+                                            <div class="form__elem-title">Имя</div>
+                                            <input type="text" class="form__elem-input">
+                                        </label>
+                                        <label class="form__elem">
+                                            <div class="form__elem-title">Телефон</div>
+                                            <input type="text" class="form__elem-input">
+                                        </label>
+                                    </div>
+                                    <div class="form__row">
+                                        <label class="form__elem">
+                                            <div class="form__elem-title">Дом</div>
+                                            <input type="text" class="form__elem-input">
+                                        </label>
+                                        <label class="form__elem">
+                                            <div class="form__elem-title">Корпус</div>
+                                            <input type="text" class="form__elem-input">
+                                        </label>
+                                        <label class="form__elem">
+                                                <div class="form__elem-title">Квартира</div>
+                                                <input type="text" class="form__elem-input">
+                                            </label>
+                                        <!-- <label class="form__elem">
+                                                <div class="form__elem-title">Телефон</div>
+                                                <input type="text" class="form__elem-input">
+                                            </label> -->
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- <div class="form__content">
+                                <div class="form__col-left">
+                                    <div class="form__row">
+                                        <label class="form__elem">Имя
+                                            <div for="" class="form__elem-title"></div>
+                                        </label>  
+                                            <input type="text" class="form__elem-input">
+                                        <div class="form__elem">
+                                            <div for="" class="form__elem_title">Телефон</div>
+                                            <input type="tel" class="form__elem_input">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form__elem form__elem_street">
+                                        <label for="" class="form__elem_title">Улица</label>
+                                        <input type="tel" class="form__elem_input">
+                                    </div>
+                                    <div class="form__elem form__elem_target">
+                                        <div for="" class="form__elem_title">Дом</div>
+                                        <input type="tel" class="form__elem_input">
+                                    </div>
+                                    <div class="form__elem form__elem_target">
+                                        <div for="" class="form__elem_title">Корпус</div>
+                                        <input type="tel" class="form__elem_input">
+                                    </div>
+                                    <div class="form__elem form__elem_target">
+                                        <div for="" class="form__elem_title">Квартира</div>
+                                        <input type="tel" class="form__elem_input">
+                                    </div>
+                                    <div class="form__elem form__elem_target">
+                                        <div for="" class="form__elem_title">Этаж</div>
+                                        <input type="tel" class="form__elem_input">
+                                    </div>
+                                </div>
+                                <div class="form__col-right">
+                                    <div class="form__textarea">
+                                        <div for="" class="form__elem_title">Комментарий</div>
+                                        <textarea class="form__text_input"></textarea>
+                                    </div>
+                                    <div class="form__radio">
+                                        <input type="radio" class="form__radio_elem">
+                                        <label for="" class="form__elem_title">Потребуется сдача</label>
+                                    </div>
+                                    <div class="form__radio">
+                                        <input type="radio" class="form__radio_elem" checked>
+                                        <label for="" class="form__elem_title">Оплата по карте</label>
+                                    </div>
+                                    <div class="form__checkbox">
+                                        <input type="checkbox" class="form__checkbox_call" checked>
+                                        <div for="" class="form__elem_title">Не перезванивать</div>
+                                    </div>
+                                    <div class="form__controls">
+                                        <div class="header__button">
+                                            <a href="#" class="order-link">ЗАКАЗАТЬ</a>
+                                        </div>
+                                        <input type="reset" value="Очистить" class="form__reset">
+                                    </div>
+                                </div>
+                            </div> -->
+                        </form>
+                    </div>
+                        
+                </div>
             </section>
             <section class="section contacts">
-
+                <div class="contacts__content">
+                        
+                </div>
+                    <footer>
+                        <div class="container contacts__container">    
+                            <div class="footer__col footer__col_left">
+                                <address>
+                                    <span class="contacts__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</span>
+                                    <!-- <a href="#" class="contacts__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</a> -->
+                                    <a href="tel:+78123771377" class="contacts__phone">
+                                        <img src="/img/icons/phone.svg" alt="" class="contacts__phone_pic"> 
+                                        <span class="contacts__phone_title">+7 (812) 377-13-77</span>
+                                    </a>
+                                </address>
+                            </div>
+                            <div class="footer__col footer__col_right">
+                                <ul class="socials__list">
+                                    <li class="socials__item">
+                                        <a href="" class="socials__link">
+                                            <svg class="socials__icon">
+                                                <use xlink:href="img/sprite/sprite.svg#vk"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item">
+                                        <a href="" class="socials__link">
+                                            <svg class="socials__icon">
+                                                <use xlink:href="img/sprite/sprite.svg#fb"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item">
+                                        <a href="" class="socials__link">
+                                            <svg class="socials__icon">
+                                                <use xlink:href="img/sprite/sprite.svg#inst"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials__item">
+                                        <a href="" class="socials__link">
+                                            <svg class="socials__icon">
+                                                <use xlink:href="img/sprite/sprite.svg#twitter"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>    
+                    </footer>
             </section>
             <aside>
                 <ul class="vertical-nav__list">

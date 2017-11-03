@@ -22,15 +22,22 @@
    
 }
 
-@each $img in (1, 2, 3, 4, 5, 6, 7, 8) {
-    .comments__img_#{$img} {
-        background-image: url(/img/content/comments/comment#{$img}.jpg);
-    }
-}
+// @each $img in (1, 2, 3, 4, 5, 6, 7, 8) {
+//     .comments__img_#{$img} {
+//         background-image: url(/img/content/comments/comment#{$img}.jpg);
+//     }
+// }
 
 
 .comments__overlay {
+
     visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    // transition: opacity: 5s;
 }
 
 /* .comments__overlay {
@@ -47,9 +54,10 @@
     font-family: 'gagalinregular';
     color: #ffffff;
     font-size: 14px;
-    top: 50px;
-    left: 20px;
-    position: absolute;
+    margin-bottom: 30px;
+    // top: 50px;
+    // left: 20px;
+    // position: absolute;
     
 }
 
@@ -57,20 +65,21 @@
     font-family: 'ubuntulight';
     color: #ffffff;
     font-size: 14px;
-    position: absolute;
-    top: 90px;
-    left: 20px;
+    // position: absolute;
+    // top: 90px;
+    // left: 20px;
     line-height: 1.7;
     width: 225px;
+    margin-bottom: 15px;
 }
 
 .comments__button {
     font-family: 'ubuntumedium';
     color: #ffffff;
     font-size: 13px;
-    position: absolute;
-    left: 20px;
-    top: 240px;
+    // position: absolute;
+    // left: 20px;
+    // top: 240px;
     background: #2f3234;
     padding: 10px 15px;
     border-radius: 5px;
@@ -81,14 +90,18 @@
 
 .comments__button:hover {
     border: 1px solid #656667;
+    transition: .5s;
 }
 
 .comments__item:hover .comments__img {
     filter: brightness(40%) grayscale(1);
+    transition: .5s;
 }
 
 .comments__item:hover .comments__overlay {
     visibility: visible;
+    opacity: 1;
+    transition: .5s;
 }
 
  /* .comments__overlay:hover {

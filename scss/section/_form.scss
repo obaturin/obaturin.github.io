@@ -3,7 +3,47 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
+// .form__order {
+//     display: flex;
+    
+// }
+
+
+// .main-title_form {
+//     margin-bottom: 50px;
+// }
+
+
+.form__elem-title {
+    font-family: 'ubuntulight';
+    color: #ffffff;
+    font-size: 14px;
+}
+
+// .form__text_input {
+//     width: 460px;
+//     height: 110px;
+//     // font-family: 'open_sanslight';
+//     // font-size: 14px;
+//     // color: #221f1f;
+//     // padding-left: 10px;
+//     border: solid 1px transparent;
+//     border-radius: 5px;
+// }
+
+// .form__elem_street {
+//     &.form__elem_input {
+//         width: 460px;
+//         height: 110px;
+//     }
+// }
+
+// .form__checkbox {
+//     color: #e45028;
+// }
