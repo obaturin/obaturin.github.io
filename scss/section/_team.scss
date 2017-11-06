@@ -17,42 +17,96 @@
     right: 0;
     width: 50%;
     background: rgba(#2f3234, .93);
-    padding-left: 70px;
+    padding-left: 5%;
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
-  }
+
+    @include tablets {
+      width: 100%;
+      padding: 0;
+    }
+}
   
-  .team-acco__trigger {
+
+
+.main-title_team {
+    margin-bottom: 5rem;
+}
+
+
+  .team__item {
+    margin-bottom: 20px;
+}
+
+
+.team__trigger {
     color: #fff;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    text-transform: uppercase;
+    font-family: 'gagalinregular';
+    font-size: 14px;
+    margin-bottom: 15px;
   
     &:before {
       content: "";
       height: 0;
       width: 0;
-      border: 9px solid transparent;
+      border: rem(6px) solid transparent;
       border-top-color: $yellow;
-      border-bottom-width: 0px;
+      border-bottom-width: rem(0px);
   
     }
   }
   
-  .team-acco__content {
+.team__block {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+.team__pic {
+    width: 30%;
+    text-align: center;
+    @include tablets {
+      width: 100%;
+    }
   }
   
-  .team-acco__text {
+.team__pic-img {
+    width: rem(100px);
+    height: rem(100px);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+  
+.team__text {
     color: #fff;
-  }
+}
   
-  .team-acco__content {
+.team__text-title {
+    font-family: 'ubuntubold';
+    font-size: rem(14px);
+    color: #fff;
+    margin-bottom: rem(14px);
+ }
+  
+.team__text-desc {
+    font-family: 'ubuntulight';
+    color: #fff;
+    font-size: rem(14px);
+}
+
+
+
+.team__block {
     display: none;
-  }
+ }
   
-  .team-acco__item_active {
-    .team-acco__trigger {
+.team__item_active {
+    .team__trigger {
       color: $yellow;
   
       &:before {
@@ -60,7 +114,18 @@
       }
     }
   
-    .team-acco__content {
-      display: block;
+    .team__block {
+      display: flex;
+      
+      @include tablets {
+        display: block;
+      }
     }
-  }
+}
+
+
+.team__content {
+    @include tablets {
+    text-align: center;
+}
+}

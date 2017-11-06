@@ -50,9 +50,13 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="header__button">
+                        <div class="header__links">
                             <a href="#" class="order-link" data-goto="6">ЗАКАЗАТЬ</a>
+                            <a class="hamburger-menu-link" href="">
+                                <div class="hamburger-menu-link__bars"></div>
+                            </a>
                         </div>
+
                     </header>
                     
                     <div class="welcome__content">
@@ -66,8 +70,11 @@
                     </div>
                 
                     <div class="transition">
-                        <a href="#" class="transition__link">
-                            <img src="/img/icons/arrow-scroll.svg" alt="" class="transition__button">
+                        <a href="#" class="transition-link">
+                            <svg class="transition-link__icon">
+                                <use xlink:href="img/sprite/sprite.svg#arrow-scroll"></use>
+                            </svg>
+                            <!-- <img src="/img/icons/arrow-scroll.svg" alt="" class="transition__button"> -->
                         </a>
                     </div>
                 </div>    
@@ -78,112 +85,139 @@
                     <ul class="best__list">
                         <li class="best__item">
                             <img src="/img/icons/meat.svg" alt="" class="best__item-pic">
-                            <div class="best__item-title">100% свежее мясо</div>
-                            <div class="best__item-desc">
-                                Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                            <div class="best__item-text">
+                                <div class="best__item-title">100% свежее мясо</div>
+                                <div class="best__item-desc">
+                                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                                </div>
                             </div>
                         </li>
                         <li class="best__item">
                             <img src="/img/icons/hand.svg" alt="" class="best__item-pic">
-                            <div class="best__item-title">Ручная сборка</div>
-                            <div class="best__item-desc">
-                                Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                            <div class="best__item-text">
+                                <div class="best__item-title">Ручная сборка</div>
+                                <div class="best__item-desc">
+                                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                                </div>
                             </div>
                         </li>
                         <li class="best__item">
                             <img src="/img/icons/natural.svg" alt="" class="best__item-pic">
-                            <div class="best__item-title">Натуральные ингредиенты</div>
-                            <div class="best__item-desc">
-                                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                            <div class="best__item-text">
+                                <div class="best__item-title">Натуральные ингредиенты</div>
+                                <div class="best__item-desc">
+                                        Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </section>
             <section class="section team">
-                <div class="team__container">
+                <div class="container team__container">
                     <div class="team__content">
-                        <div class="main-title">Команда</div>
-                        <ul class="team-acco">
-                        <li class="team-acco__item">
-                            <a href="#" class="team-acco__trigger">Дэниел Редклифф</a>
-                            <div class="team-acco__content">
-                            <div class="team-acco__pic">
-                                <img class="team-acco__pic-img" src="/img/content/team/member_1.jpg" alt="">
-                            </div>
-                            <div class="team-acco__text">
-                                <div class="team-acco__text-title">Оператор</div>
-                                <div class="team-acco__text-content">
-                                <p>
-                                    С радостью поможет подобрать идеальный бургер и оформить заказ.  
-                                </p>
+                        <div class="main-title main-title_team">Команда</div>
+                        <ul class="team__list">
+                            <li class="team__item">
+                                <a href="#" class="team__trigger">Дэниел Редклифф</a>
+                                <div class="team__block">
+                                    <div class="team__pic">
+                                        <img class="team__pic-img" style="background-image: url(/img/content/team/member_1.jpg);">
+                                    </div>
+                                    <div class="team__text">
+                                        <div class="team__text-title">Шеф-повар</div>
+                                        <div class="team__text-desc">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+                                    </div>
                                 </div>
-                            </div>
-                            </div>
-                        </li>
-                        <li class="team-acco__item team-acco__item_active">
-                            <a href="#" class="team-acco__trigger">Дэниел Редклифф</a>
-                            <div class="team-acco__content">
-                            <div class="team-acco__pic">
-                                <img class="team-acco__pic-img" src="/img/content/team/member_1.jpg" alt="">
-                            </div>
-                            <div class="team-acco__text">
-                                <div class="team-acco__text-title">Оператор</div>
-                                <div class="team-acco__text-content">
-                                <p>
-                                    С радостью поможет подобрать идеальный бургер и оформить заказ.  
-                                </p>
+                            </li>
+                            <li class="team__item team__item_active">
+                                <a href="#" class="team__trigger">Ричард Джеймс</a>
+                                <div class="team__block">
+                                    <div class="team__pic">
+                                        <img class="team__pic-img" style="background-image: url(/img/content/team/member_1.jpg);">
+                                    </div>
+                                    <div class="team__text">
+                                        <div class="team__text-title">Оператор</div>
+                                        <div class="team__text-desc">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+                                    </div>
                                 </div>
-                            </div>
-                            </div>
-                        </li>
-                        <li class="team-acco__item">
-                            <a href="#" class="team-acco__trigger">Дэниел Редклифф</a>
-                            <div class="team-acco__content">
-                            <div class="team-acco__pic">
-                                <img class="team-acco__pic-img" src="/img/content/team/member_1.jpg" alt="">
-                            </div>
-                            <div class="team-acco__text">
-                                <div class="team-acco__text-title">Оператор</div>
-                                <div class="team-acco__text-content">
-                                <p>
-                                    С радостью поможет подобрать идеальный бургер и оформить заказ.  
-                                </p>
+                            </li>
+                            <li class="team__item">
+                                <a href="#" class="team__trigger">Джейк Финн</a>
+                                <div class="team__block">
+                                    <div class="team__pic">
+                                        <img class="team__pic-img" style="background-image: url(/img/content/team/member_1.jpg);">
+                                    </div>
+                                    <div class="team__text">
+                                        <div class="team__text-title">>Менеджер</div>
+                                        <div class="team__text-desc">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+                                    </div>
                                 </div>
-                            </div>
-                            </div>
-                        </li>
-                        <li class="team-acco__item">
-                            <a href="#" class="team-acco__trigger">Дэниел Редклифф</a>
-                            <div class="team-acco__content">
-                            <div class="team-acco__pic">
-                                <img class="team-acco__pic-img" src="/img/content/team/member_1.jpg" alt="">
-                            </div>
-                            <div class="team-acco__text">
-                                <div class="team-acco__text-title">Оператор</div>
-                                <div class="team-acco__text-content">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nam maxime nisi voluptates rem voluptatum sed eum dolorum,
-                                    ad facilis!
-                                </p>
+                            </li>
+                            <li class="team__item">
+                                <a href="#" class="team__trigger">Николай Иванов</a>
+                                <div class="team__block">
+                                    <div class="team__pic">
+                                        <img class="team__pic-img" style="background-image: url(/img/content/team/member_1.jpg);">
+                                    </div>
+                                    <div class="team__text">
+                                        <div class="team__text-title">Шоколатье</div>
+                                        <div class="team__text-desc">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+                                    </div>
                                 </div>
-                            </div>
-                            </div>
-                        </li>
+                            </li>
                         </ul>
                     </div>
-                    </div>
-                </section>
+                </div>
+            </section>
             <section class="section menu">
+                <div class="main-title main-title_menu">Меню</div>
                 <ul class="menu-accordion__list">
-                    <li class="menu-accordion__item"><img src="/img/content/menu/menu_meat.jpg" alt="" class="menu-accordion__img">
-                        <div class="menu-accordion__title">для мясоедов</div>
+                    <li class="menu-accordion__item">
+                        <a class="menu-accordion__img" href="#" style="background-image: url('/img/content/menu/menu_meat.jpg')">
+                            <div class="menu-accordion__title">для мясоедов</div>
+                        </a>
+                        <div class="menu-accordion__content">
+                            <div class="menu-accordion__text">
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+                                Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+                                однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
+                                выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                                конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+                                стал особенно чутко относиться к слову.
+                            </div>
+                        </div>
                     </li>
-                    <li class="menu-accordion__item"><img src="/img/content/menu/menu_veget.jpg" alt="" class="menu-accordion__img">
-                        <div class="menu-accordion__title">вегетарианское</div>
+                    <li class="menu-accordion__item active">
+                        <a class="menu-accordion__img" href="#" style="background-image: url('/img/content/menu/menu_veget.jpg')">
+                            <div class="menu-accordion__title">вегетарианское</div>
+                        </a>
+                        <div class="menu-accordion__content">
+                            <div class="menu-accordion__text">
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+                                Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+                                однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
+                                выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                                конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+                                стал особенно чутко относиться к слову.
+                            </div>
+                        </div>
                     </li>
-                    <li class="menu-accordion__item"><img src="/img/content/menu/menu_diet.jpg" alt="" class="menu-accordion__img">
-                        <div class="menu-accordion__title">диетическое</div>
+                    <li class="menu-accordion__item">
+                    <!-- <li class="menu-accordion__item"><img src="/img/content/menu/menu_diet.jpg" alt="" class="menu-accordion__img"> -->
+                        <a class="menu-accordion__img" href="#" style="background-image: url('/img/content/menu/menu_diet.jpg')">
+                            <div class="menu-accordion__title">диетическое</div>
+                        </a>
+                        <div class="menu-accordion__content">
+                            <div class="menu-accordion__text">
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений.
+                                Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову,
+                                однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
+                                выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует
+                                конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник
+                                стал особенно чутко относиться к слову.
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </section>
@@ -275,101 +309,80 @@
             </section>
             <section class="section form">
                 <div class="container form__container">
-                    <!-- <div class="main-title main-title_form">закажите доставку</div> -->
+                    <div class="main-title main-title_form">закажите доставку</div>
                     <div class="form">
                         <form action="" class="form__order">
                             <div class="form__content">
                                 <div class="form__col-left">
                                     <div class="form__row">
-                                        <label class="form__elem">
-                                            <div class="form__elem-title">Имя</div>
-                                            <input type="text" class="form__elem-input">
-                                        </label>
-                                        <label class="form__elem">
-                                            <div class="form__elem-title">Телефон</div>
-                                            <input type="text" class="form__elem-input">
-                                        </label>
-                                    </div>
-                                    <div class="form__row">
-                                        <label class="form__elem">
-                                            <div class="form__elem-title">Дом</div>
-                                            <input type="text" class="form__elem-input">
-                                        </label>
-                                        <label class="form__elem">
-                                            <div class="form__elem-title">Корпус</div>
-                                            <input type="text" class="form__elem-input">
-                                        </label>
-                                        <label class="form__elem">
-                                                <div class="form__elem-title">Квартира</div>
-                                                <input type="text" class="form__elem-input">
-                                            </label>
-                                        <!-- <label class="form__elem">
-                                                <div class="form__elem-title">Телефон</div>
-                                                <input type="text" class="form__elem-input">
-                                            </label> -->
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- <div class="form__content">
-                                <div class="form__col-left">
-                                    <div class="form__row">
                                         <label class="form__elem">Имя
                                             <div for="" class="form__elem-title"></div>
-                                        </label>  
                                             <input type="text" class="form__elem-input">
-                                        <div class="form__elem">
-                                            <div for="" class="form__elem_title">Телефон</div>
-                                            <input type="tel" class="form__elem_input">
-                                        </div>
+                                        </label>  
+                                        <label class="form__elem">
+                                            <div for="" class="form__elem-title">Телефон</div>
+                                            <input type="text" class="form__elem-input">
+                                        </label>
                                     </div>
-                                    
-                                    <div class="form__elem form__elem_street">
-                                        <label for="" class="form__elem_title">Улица</label>
-                                        <input type="tel" class="form__elem_input">
+                                    <div class="form__row">
+                                        <label class="form__elem form__elem_street">
+                                            <div for="" class="form__elem-title">Улица</div>
+                                            <input type="text" class="form__elem-input">
+                                        </label>
                                     </div>
-                                    <div class="form__elem form__elem_target">
-                                        <div for="" class="form__elem_title">Дом</div>
-                                        <input type="tel" class="form__elem_input">
-                                    </div>
-                                    <div class="form__elem form__elem_target">
-                                        <div for="" class="form__elem_title">Корпус</div>
-                                        <input type="tel" class="form__elem_input">
-                                    </div>
-                                    <div class="form__elem form__elem_target">
-                                        <div for="" class="form__elem_title">Квартира</div>
-                                        <input type="tel" class="form__elem_input">
-                                    </div>
-                                    <div class="form__elem form__elem_target">
-                                        <div for="" class="form__elem_title">Этаж</div>
-                                        <input type="tel" class="form__elem_input">
+                                    <div class="form__row">
+                                        <label class="form__elem form__elem_target">
+                                            <div for="" class="form__elem-title">Дом</div>
+                                            <input type="text" class="form__elem-input">
+                                        </label>
+                                        <label class="form__elem form__elem_target">
+                                            <div for="" class="form__elem-title">Корпус</div>
+                                            <input type="text" class="form__elem-input">
+                                        </label>
+                                        <label class="form__elem form__elem_target">
+                                            <div for="" class="form__elem-title">Квартира</div>
+                                            <input type="text" class="form__elem-input">
+                                        </label>
+                                        <label class="form__elem form__elem_target">
+                                            <div for="" class="form__elem-title">Этаж</div>
+                                            <input type="text" class="form__elem-input">
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="form__col-right">
-                                    <div class="form__textarea">
-                                        <div for="" class="form__elem_title">Комментарий</div>
-                                        <textarea class="form__text_input"></textarea>
+                                    <div class="form__row form__row_textarea">
+                                        <label class="form__elem">
+                                            <div class="form__elem-title">Комментарий</div>
+                                            <textarea class="form__elem-input form__elem-input_textarea" name="comment"></textarea>
+                                        </label>
                                     </div>
-                                    <div class="form__radio">
-                                        <input type="radio" class="form__radio_elem">
-                                        <label for="" class="form__elem_title">Потребуется сдача</label>
-                                    </div>
-                                    <div class="form__radio">
-                                        <input type="radio" class="form__radio_elem" checked>
-                                        <label for="" class="form__elem_title">Оплата по карте</label>
-                                    </div>
-                                    <div class="form__checkbox">
-                                        <input type="checkbox" class="form__checkbox_call" checked>
-                                        <div for="" class="form__elem_title">Не перезванивать</div>
-                                    </div>
-                                    <div class="form__controls">
-                                        <div class="header__button">
-                                            <a href="#" class="order-link">ЗАКАЗАТЬ</a>
+                                    <div class="form__buttons">
+                                        <div class="form__row form__row_radio">
+                                            <label class="form__radio">
+                                                <input class="form__radio-elem" name="payment" type="radio">
+                                                <div class="form__radio-fake"></div>
+                                                <div class="form__elem-title form__elem-title_radio">Потребуется сдача</div>
+                                            </label>
+                                            <label class="form__radio">
+                                                <input class="form__radio-elem" name="payment" type="radio" checked>
+                                                <div class="form__radio-fake"></div>
+                                                <div class="form__elem-title form__elem-title_radio">Оплата по карте</div>
+                                            </label>
                                         </div>
-                                        <input type="reset" value="Очистить" class="form__reset">
-                                    </div>
+                                        <div class="form__row">
+                                            <label class="form__checkbox">
+                                                <input class="form__checkbox-elem" name="callback" type="checkbox" checked>
+                                                <div class="form__checkbox-fake"></div>
+                                                <div class="form__elem-title form__elem-title_radio">Не перезванивать</div>
+                                            </label>
+                                        </div>
+                                        <div class="form__row">
+                                            <input class="form__button" name="" type="submit" value="Заказать">
+                                            <input class="form__button form__button_reset" name="" type="reset" value="Очистить">
+                                        </div>
+                                    </div>    
                                 </div>
-                            </div> -->
+                            </div>
                         </form>
                     </div>
                         
