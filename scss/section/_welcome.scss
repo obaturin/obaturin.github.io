@@ -2,20 +2,29 @@
     background-image: url("/img/content/welcome/video-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-position: center center;
     position: relative;
 }
+
+
 
 .header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
+    padding-top: rem(10px);
 }
 
 .header__logo {
     margin-right: auto;
+
+}
+
+.header__menu {
+    @include tablets {
+        display: none;
+    }
 }
 
 .nav {
@@ -27,7 +36,7 @@
     padding: 0;
 }
 
-.navigation__item {
+.nav__item {
     display: inline-block;
     vertical-align: middle;
     white-space: nowrap;
@@ -35,18 +44,18 @@
         display: inline-block;
         vertical-align: middle;
         content: '';
-        @include circle(5px, #ffffff);
-        margin: 0 12px;
+        @include circle(rem(5px), #ffffff);
+        margin: 0 rem(12px);
     }
     &:last-child:after {
         display: none;
     }
 }
 
-.navigation__link {
+.nav__link {
     font-family: 'ubuntumedium';
     color: #ffffff;
-    font-size: 13px;
+    font-size: rem(13px);
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
@@ -57,25 +66,80 @@
         }
 }
 
+.header__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+// .header__links {
+//     display: inline-block;
+ 
+// }
+
+
+.hamburger-menu-link {
+    // display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	height: rem(22px);
+	align-items: center;
+	margin-left: rem(30px);
+  display: none;
+
+      @include tablets {
+         display: flex;
+  }
+}
+
+.hamburger-menu-link__bars {
+	&, &:before, &:after {
+		background: #fff;
+		width: rem(24px);
+		height: rem(5px);
+        border-radius: rem(3px);
+	}
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+	}
+
+	&:before {
+        top: 0px;
+        
+	}
+
+	&:after {
+		bottom: 0;
+	}
+}
+
 .welcome__container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    // flex: 1;
 }
 
 .welcome__content {
-    width: 100%;
+    // width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     flex-grow: 1;
     align-items: center;
     padding-bottom: 15%;
+        @include tablets {
+            flex-direction: column;
+            // padding: rem(151px);
+        }
 
 }
 
-.main-foto, .welcome__title {
+.welcome__main-foto, .welcome__title {
     flex-basis: 50%;
     display: flex;
 }
@@ -83,29 +147,42 @@
 .welcome__title {
     flex-direction: column;
     justify-content: center;
+    @include tablets {
+     
+        text-align: center;
+    }
 }
 
-.main-title {
-    font-family: 'gagalinregular';
-    color: #f9b43b;
-    font-size: 72px;
-    margin: 0;
-    padding-top: 60px;
+.main-title_welcome {
+    padding-top: rem(60px);
+    @include tablets {
+        padding-top: 0;
+    }
+    
 }
 
-.sub-title {
+.welcome__sub-title {
     font-family: 'lifehackmedium';
     color: #ffffff;
-    font-size: 65px;
-    // width: 410px;
+    font-size: rem(65px);
+    // width: rem(410px);
     line-height: 1;
+    @include tablets {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
 
-.transition__link {
-    width: 30px;
-    height: 15px;
+.transition-link {
     position: absolute;
-    bottom: 40px;
+    bottom: rem(40px);
 }
+
+.transition-link__icon {
+    width: rem(30px);
+    height: rem(15px);
+    fill: #fff;
+}
+
 

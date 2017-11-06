@@ -3,53 +3,75 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-}
-
-
-
-.menu-accordion__list {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: flex-end;
+    position: relative;
     
 }
 
-.menu-accordion__item {
+.main-title_menu {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+}
+
+.menu-accordion__list {
     display: flex;
-    width: 10%;
-    height: 100%;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    transition: 1.5s;
-    &:hover {
-        width: 40%;
-        transition: 1s;
+    // width: 25%;
+    // height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.menu-accordion__item {
+    &.active {
+        .menu-accordion__title {
+          color: $yellow;
+        }
+        .menu-accordion__content {
+          width: rem(550px);
+        }
     }
 }
 
-
 .menu-accordion__img {
-//     width: 100%;
-     height: 100%;
+    width: rem(80px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
 }
 
 .menu-accordion__title {
-    text-transform: uppercase;
-    position: absolute;
-    // display: flex;
-    // flex-direction: column-reverse;
-    // justify-content: center;
-    // align-items: flex-end;
     font-family: 'gagalinregular';
+    font-size: rem(40px);
     color: #ffffff;
-    font-size: 39.81px;
-    // top: 50%;
+    text-transform: uppercase;
     transform: rotate(-90deg);
-    // left: -50px;
-    // position: absolute;
+    white-space: nowrap;
 }
+
+.menu-accordion__content {
+    height: 100%;
+    float: left;
+    background: rgba(#2f3234, .93);
+    width: 0;
+    // position: absolute;
+    overflow: hidden;
+}
+
+.menu-accordion__text {
+    font-family: 'ubuntulight';
+    font-size: rem(14px);
+    color: #fff;
+    // padding-left: 5%;
+    padding: rem(60px) rem(30px);
+    width: 100%;
+    line-height: 1.8;
+}
+

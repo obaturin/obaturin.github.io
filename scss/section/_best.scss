@@ -23,6 +23,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 .best__item {
@@ -31,27 +35,47 @@
     align-items: center;
     flex-basis: 33%;
     
+    @include phones {
+        flex-direction: row;
+    }
+    
 }
 
 .best__item-pic {
-    height: 90px;
+    height: rem(90px);
+    width: rem(90px);
+    @include phones {
+        margin-right: 5%;
+    }
+}
+
+.best__item-text {
+    
 }
 
 .best__item-title {
     font-family: 'lifehackmedium';
     color: #2f3234;
-    font-size: 24.1px;
-    margin-top: 35px;
-    margin-bottom: 15px;
+    font-size: rem(24.1px);
+    margin-top: rem(35px);
+    margin-bottom: rem(15px);
     text-align: center;
+    
+    @include phones {
+        text-align: left;
+    }
 }
 
 .best__item-desc {
     font-family: 'ubuntulight';
     color: #2f3234;
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1.62;
-    text-align: center
+    text-align: center;
+    
+    @include phones {
+        text-align: left;
+    }
 }
 
 

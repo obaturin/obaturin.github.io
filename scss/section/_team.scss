@@ -1,11 +1,131 @@
 .team {
     background-image: url("/img/content/team/team_bg.jpg");
     background-repeat: no-repeat;
-    // background-position: center center;
+    background-position: center center;
     background-size: cover;
+    position: relative;
     // display: flex;
     // justify-content: center;
     // align-items: center;
 }
 
 
+.team__container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background: rgba(#2f3234, .93);
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+
+    @include tablets {
+      width: 100%;
+      padding: 0;
+    }
+}
+  
+
+
+.main-title_team {
+    margin-bottom: 5rem;
+}
+
+
+  .team__item {
+    margin-bottom: 20px;
+}
+
+
+.team__trigger {
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'gagalinregular';
+    font-size: 14px;
+    margin-bottom: 15px;
+  
+    &:before {
+      content: "";
+      height: 0;
+      width: 0;
+      border: rem(6px) solid transparent;
+      border-top-color: $yellow;
+      border-bottom-width: rem(0px);
+  
+    }
+  }
+  
+.team__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+.team__pic {
+    width: 30%;
+    text-align: center;
+    @include tablets {
+      width: 100%;
+    }
+  }
+  
+.team__pic-img {
+    width: rem(100px);
+    height: rem(100px);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+  
+.team__text {
+    color: #fff;
+}
+  
+.team__text-title {
+    font-family: 'ubuntubold';
+    font-size: rem(14px);
+    color: #fff;
+    margin-bottom: rem(14px);
+ }
+  
+.team__text-desc {
+    font-family: 'ubuntulight';
+    color: #fff;
+    font-size: rem(14px);
+}
+
+
+
+.team__block {
+    display: none;
+ }
+  
+.team__item_active {
+    .team__trigger {
+      color: $yellow;
+  
+      &:before {
+        transform: rotate(-180deg);
+      }
+    }
+  
+    .team__block {
+      display: flex;
+      
+      @include tablets {
+        display: block;
+      }
+    }
+}
+
+
+.team__content {
+    @include tablets {
+    text-align: center;
+}
+}

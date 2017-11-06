@@ -2,6 +2,9 @@
 @import "config/_variables";
 @import "config/_mixins";
 
+//media
+@import "layout/_media";
+
 // base
 @import "layout/_fonts";
 @import "layout/_base";
@@ -15,5 +18,9 @@
 @import "section/_contacts";
 @import "section/_form";
 @import "section/_menu";
+
+
+
+
 
 
