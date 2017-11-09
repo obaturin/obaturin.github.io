@@ -157,6 +157,9 @@ a {
   position: fixed;
   right: 4.375rem;
   top: 5.9375rem; }
+  @media screen and (max-width: 480px) {
+    .vertical-nav__list {
+      display: none; } }
 
 .vertical-nav__link {
   margin-bottom: 0.3125rem;
@@ -350,6 +353,10 @@ footer {
       -ms-flex-direction: column;
       flex-direction: column; } }
 
+.welcome__main-foto-pic {
+  max-width: 100%;
+  max-height: 100%; }
+
 .welcome__main-foto, .welcome__title {
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
@@ -357,7 +364,14 @@ footer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  height: 25rem; }
+  @media screen and (max-width: 768px) {
+    .welcome__main-foto, .welcome__title {
+      height: 23.75rem; } }
+  @media screen and (max-width: 480px) {
+    .welcome__main-foto, .welcome__title {
+      height: 18.75rem; } }
 
 .welcome__title {
   -webkit-box-orient: vertical;
@@ -378,6 +392,9 @@ footer {
   @media screen and (max-width: 768px) {
     .main-title_welcome {
       padding-top: 0; } }
+  @media screen and (max-width: 320px) {
+    .main-title_welcome {
+      font-size: 3.3125rem; } }
 
 .welcome__sub-title {
   font-family: 'lifehackmedium';
@@ -388,6 +405,9 @@ footer {
     .welcome__sub-title {
       padding-left: 5%;
       padding-right: 5%; } }
+  @media screen and (max-width: 320px) {
+    .welcome__sub-title {
+      font-size: 2.6875rem; } }
 
 .transition-link {
   position: absolute;
@@ -630,9 +650,12 @@ footer {
 
 .main-title_team {
   margin-bottom: 5rem; }
+  @media screen and (max-width: 480px) {
+    .main-title_team {
+      font-size: 3.125rem; } }
 
 .team__item {
-  margin-bottom: 20px; }
+  margin-bottom: 1.25rem; }
 
 .team__trigger {
   color: #fff;
@@ -646,8 +669,8 @@ footer {
   align-items: center;
   text-transform: uppercase;
   font-family: 'gagalinregular';
-  font-size: 14px;
-  margin-bottom: 15px; }
+  font-size: 0.875rem;
+  margin-bottom: 0.9375rem; }
   .team__trigger:before {
     content: "";
     height: 0;
@@ -655,6 +678,12 @@ footer {
     border: 0.375rem solid transparent;
     border-top-color: #f8b43a;
     border-bottom-width: 0rem; }
+  @media screen and (max-width: 768px) {
+    .team__trigger {
+      font-size: 1.5rem; } }
+  @media screen and (max-width: 480px) {
+    .team__trigger {
+      font-size: 1.5rem; } }
 
 .team__block {
   display: -webkit-box;
@@ -670,6 +699,10 @@ footer {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media screen and (max-width: 480px) {
+    .team__block {
+      padding-left: 10%;
+      padding-right: 10%; } }
 
 .team__pic {
   width: 30%;
@@ -687,7 +720,8 @@ footer {
   border-radius: 50%; }
 
 .team__text {
-  color: #fff; }
+  color: #fff;
+  margin-left: 3%; }
 
 .team__text-title {
   font-family: 'ubuntubold';

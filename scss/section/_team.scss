@@ -31,11 +31,14 @@
 
 .main-title_team {
     margin-bottom: 5rem;
+    @include phones {
+      font-size: rem(50px);
+  }  
 }
 
 
   .team__item {
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
 }
 
 
@@ -45,8 +48,9 @@
     align-items: center;
     text-transform: uppercase;
     font-family: 'gagalinregular';
-    font-size: 14px;
-    margin-bottom: 15px;
+    font-size: rem(14px);
+    margin-bottom: rem(15px);
+
   
     &:before {
       content: "";
@@ -57,12 +61,24 @@
       border-bottom-width: rem(0px);
   
     }
-  }
+
+    @include tablets {
+      font-size: rem(24px);
+   }
+   @include phones {
+      font-size: rem(24px);
+  }  
+
+}
   
 .team__block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @include phones {
+      padding-left: 10%;
+      padding-right: 10%;
+  }  
   }
 
 .team__pic {
@@ -71,6 +87,7 @@
     @include tablets {
       width: 100%;
     }
+
   }
   
 .team__pic-img {
@@ -84,6 +101,7 @@
   
 .team__text {
     color: #fff;
+    margin-left: 3%;
 }
   
 .team__text-title {
