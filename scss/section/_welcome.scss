@@ -139,9 +139,21 @@
 
 }
 
+.welcome__main-foto-pic {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .welcome__main-foto, .welcome__title {
     flex-basis: 50%;
     display: flex;
+    height: rem(400px);
+    @include tablets {
+       height: rem(380px);
+    }
+    @include phones {
+        height: rem(300px);
+      }  
 }
 
 .welcome__title {
@@ -158,6 +170,9 @@
     @include tablets {
         padding-top: 0;
     }
+    @include iphones {
+        font-size: rem(53px);
+      }  
     
 }
 
@@ -171,6 +186,9 @@
         padding-left: 5%;
         padding-right: 5%;
     }
+    @include iphones {
+        font-size: rem(43px);
+      }  
 }
 
 

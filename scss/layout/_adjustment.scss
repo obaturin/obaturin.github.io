@@ -56,6 +56,9 @@
     position: fixed;
     right: rem(70px);
     top: rem(95px);
+    @include phones {
+        display: none;
+    }
    
 }
 
