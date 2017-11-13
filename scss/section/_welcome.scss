@@ -213,6 +213,7 @@
     height: 100%;
     opacity: 0;
     visibility: hidden;
+    transition: 1s;
     
 }
 
@@ -229,6 +230,28 @@
     top: 4%;
     right: 2.2%;
 }
+
+.hamburger-menu-link__bars_overlay {
+    background: #fff;
+    width: rem(24px);
+    height: rem(5px);
+    border-radius: rem(3px);
+    transform: rotate(-45deg);
+
+    &:after {
+		background: #fff;
+        width: rem(24px);
+        height: rem(5px);
+        border-radius: rem(3px);
+        transform: rotate(90deg);
+
+        content: "";
+		display: block;
+		position: absolute;
+	}
+
+}
+
 
 .overlay-menu {
     position: absolute;
@@ -270,5 +293,6 @@
 
 .overlay_active {
     opacity: 1;
+    transition: 1s;
     visibility: visible;
 }
