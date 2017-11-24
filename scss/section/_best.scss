@@ -17,6 +17,11 @@
     color: #2f3234;
     padding: 0;
     margin-bottom: rem(60px);
+    @include iphones {
+        margin-bottom: rem(12px);
+        font-size: rem(56px);
+    }
+
 }
 
 .best__list {
@@ -63,6 +68,10 @@
     
     @include phones {
         text-align: left;
+    }
+
+    @include iphones {
+        margin-top: rem(25px);
     }
 }
 

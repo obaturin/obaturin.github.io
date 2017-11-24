@@ -10,14 +10,14 @@
 }
 
 
-.team__container {
+.team__content {
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     width: 50%;
     background: rgba(#2f3234, .93);
-    padding-left: 5%;
+    padding: 5% 2% 0 7%;
     display: flex;
     flex-direction: column;
 
@@ -27,7 +27,6 @@
     }
 }
   
-
 
 .main-title_team {
     margin-bottom: 5rem;
@@ -59,6 +58,8 @@
       border: rem(6px) solid transparent;
       border-top-color: $yellow;
       border-bottom-width: rem(0px);
+      transform: rotate(0deg);
+      transition: .3s;
   
     }
 
@@ -119,8 +120,13 @@
 
 
 
-.team__block {
-    display: none;
+.team__block-none {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+
+    // display: none;
+
  }
   
 .team__item_active {
@@ -129,6 +135,9 @@
   
       &:before {
         transform: rotate(-180deg);
+        transition: .3s;
+        
+        
       }
     }
   

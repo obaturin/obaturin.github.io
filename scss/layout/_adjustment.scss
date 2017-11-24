@@ -1,14 +1,25 @@
 .wrapper {
-    min-height: 100%;
+    height: 100%;
     width: 100%;
     position: relative;
-    min-height: 0;
     overflow: hidden;
+    min-height: rem(650px);
+
+    @include tablets {
+        min-height: auto;
+    }
 }
 
 .maincontent {
     height: 100%;
     min-height: rem(650px);
+    transition: 1s;
+    will-change: transform;
+
+    @include tablets {
+        min-height: auto;
+    }
+    
 } 
 
 .container {
@@ -23,10 +34,11 @@
 }
 
 .section {
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.31);
     // min-width: rem(940px);
     min-height: rem(650px);
+    position: relative;
 }
 
 .main-title {
@@ -54,7 +66,7 @@
 
 .vertical-nav__list {
     position: fixed;
-    right: rem(70px);
+    right: rem(40px);
     top: rem(95px);
     @include tablets {
         display: none;
@@ -84,10 +96,16 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        &.vertical-nav__link_active {
-            border: rem(1px) solid #ffffff;
-        }
+        
 }
+
+.vertical-nav__item_active {
+    .vertical-nav__link {
+        border: rem(1px) solid #ffffff;
+    }
+}
+
+
 
 footer {
     position: relative;
