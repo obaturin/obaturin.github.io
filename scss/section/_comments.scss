@@ -118,3 +118,34 @@
  /* .comments__overlay:hover {
     opacity: .7;
 } */
+
+
+.comments__popup {
+    display: none;
+    width: 40%;
+    
+}
+
+
+// ???
+.comments__popup .h4 {
+    font-family: 'gagalinregular';
+    font-size: rem(144px);
+}
+
+
+
+// .fancybox-close-small {
+//     color: red;
+    
+// }
+
+// .fancybox-close-small:focus {
+//     color: red;
+    
+// }
+
+
+.fancybox-close-small:after {
+    color: red;
+}

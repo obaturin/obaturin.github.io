@@ -7,8 +7,9 @@
     
 }
 
-.main-title_menu {
-	position: absolute;
+.main-title_white {
+    position: absolute;
+    color: #ffffff;
 	top: 10%;
 	left: 10%;
 }
@@ -28,9 +29,10 @@
         .menu-accordion__title {
           color: $yellow;
         }
-        .menu-accordion__content {
-          width: rem(550px);
-        }
+        // .menu-accordion__content {
+        //   width: rem(550px);
+          
+        // }
     }
 }
 
@@ -63,6 +65,7 @@
     width: 0;
     // position: absolute;
     overflow: hidden;
+    transition: .5s;
 }
 
 .menu-accordion__text {
@@ -73,5 +76,7 @@
     padding: rem(60px) rem(30px);
     width: 100%;
     line-height: 1.8;
+    opacity: 0;
+    transition: .7s;
 }
 
