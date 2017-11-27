@@ -167,12 +167,13 @@
                                                     <use xlink:href="img/sprite/sprite.svg#burger"></use>
                                                 </svg>
                                                 <div class="burgers__pic-text">состав</div>
+                                                
                                             </div>
             
                                             <div class="burgers-ingredients-dropdown">
-                                                <!-- <svg class="cross-btn">
-                                                    <use xlink:href="icons/socials-sprite.svg#cross"></use>
-                                                </svg> -->
+                                                <svg class="burgers-ingredients-dropdown__close">
+                                                    <use xlink:href="/img/sprite/sprite_max.svg#close"></use>
+                                                </svg>
                                                 <ul class="burgers-ingredients-dropdown__list">
                                                     <li class="burgers-ingredients-dropdown__item">
                                                         <div class="burgers-ingredients-dropdown__cell">
@@ -288,9 +289,9 @@
                                             </div>
             
                                             <div class="burgers-ingredients-dropdown">
-                                                <!-- <svg class="cross-btn">
-                                                    <use xlink:href="icons/socials-sprite.svg#cross"></use>
-                                                </svg> -->
+                                                <svg class="burgers-ingredients-dropdown__close">
+                                                    <use xlink:href="/img/sprite/sprite_max.svg#close"></use>
+                                                </svg>
                                                 <ul class="burgers-ingredients-dropdown__list">
                                                     <li class="burgers-ingredients-dropdown__item">
                                                         <div class="burgers-ingredients-dropdown__cell">
@@ -1012,41 +1013,41 @@
                 <div class="container form__container">
                     <div class="main-title main-title_form">закажите доставку</div>
                     <div class="form__wrapper">
-                        <form action="" class="form__order">
+                        <form action="server.php" method="post" class="form__order" id="order-form">
                             <div class="form__content">
                                 <div class="form__col-left">
                                     <div class="form__row">
                                         <label class="form__elem">
                                             <div for="" class="form__elem-title">Имя</div>
-                                            <input type="text" class="form__elem-input">
+                                            <input type="text" class="form__elem-input" id="user-name" name="user-name">
                                         </label>  
                                         <label class="form__elem">
                                             <div for="" class="form__elem-title">Телефон</div>
-                                            <input type="text" class="form__elem-input">
+                                            <input type="text" class="form__elem-input" id="user-phone" name="user-phone">
                                         </label>
                                     </div>
                                     <div class="form__row">
                                         <label class="form__elem form__elem_street">
                                             <div for="" class="form__elem-title">Улица</div>
-                                            <input type="text" class="form__elem-input">
+                                            <input type="text" class="form__elem-input" id="user-street" name="user-street">
                                         </label>
                                     </div>
                                     <div class="form__row">
                                         <label class="form__elem form__elem_target">
                                             <div for="" class="form__elem-title">Дом</div>
-                                            <input type="text" class="form__elem-input">
+                                            <input type="text" class="form__elem-input" id="user-house" name="user-house">
                                         </label>
                                         <label class="form__elem form__elem_target">
                                             <div for="" class="form__elem-title">Корпус</div>
-                                            <input type="text" class="form__elem-input">
+                                            <input type="text" class="form__elem-input" id="user-block" name="user-block">
                                         </label>
                                         <label class="form__elem form__elem_target">
                                             <div for="" class="form__elem-title">Квартира</div>
-                                            <input type="text" class="form__elem-input">
+                                            <input type="text" class="form__elem-input" id="user-apartment" name="user-apartment">
                                         </label>
                                         <label class="form__elem form__elem_target">
                                             <div for="" class="form__elem-title">Этаж</div>
-                                            <input type="text" class="form__elem-input">
+                                            <input type="text" class="form__elem-input" id="user-floor" name="user-floor">
                                         </label>
                                     </div>
                                 </div>
@@ -1054,37 +1055,42 @@
                                     <div class="form__row form__row_textarea">
                                         <label class="form__elem">
                                             <div class="form__elem-title">Комментарий</div>
-                                            <textarea class="form__elem-input form__elem-input_textarea" name="comment"></textarea>
+                                            <textarea class="form__elem-input form__elem-input_textarea" id="user-comment" name="user-comment"></textarea>
                                         </label>
                                     </div>
                                     <div class="form__buttons">
                                         <div class="form__row form__row_radio">
                                             <label class="form__radio">
-                                                <input class="form__radio-elem" name="payment" type="radio">
+                                                <input class="form__radio-elem" id="pay-cash" name="pay-option" type="radio" value="нужна сдача">
                                                 <div class="form__radio-fake"></div>
                                                 <div class="form__elem-title form__elem-title_radio">Потребуется сдача</div>
                                             </label>
                                             <label class="form__radio">
-                                                <input class="form__radio-elem" name="payment" type="radio" checked>
+                                                <input class="form__radio-elem" id="pay-card" name="pay-option" type="radio" value="картой" checked>
                                                 <div class="form__radio-fake"></div>
                                                 <div class="form__elem-title form__elem-title_radio">Оплата по карте</div>
                                             </label>
                                         </div>
                                         <div class="form__row">
                                             <label class="form__checkbox">
-                                                <input class="form__checkbox-elem" name="callback" type="checkbox" checked>
+                                                <input class="form__checkbox-elem" name="dont-disturb" id="dont-disturb" type="checkbox" value="1" checked>
                                                 <div class="form__checkbox-fake"></div>
                                                 <div class="form__elem-title form__elem-title_radio">Не перезванивать</div>
                                             </label>
                                         </div>
                                         <div class="form__row">
-                                            <input class="form__button" name="" type="submit" value="Заказать">
+                                            <input class="form__button" name="" data-fancybox data-src="#result-order" type="submit" value="Заказать">
+                                            <!-- <button class="comments__button" data-fancybox data-src="#hidden-content-8">ПОДРОБНЕЕ</button> -->
                                             <input class="form__button form__button_reset" name="" type="reset" value="Очистить">
                                         </div>
                                     </div>    
                                 </div>
                             </div>
                         </form>
+                        <div class="form__popup" id="result-order">
+                            <h4>СПАСИБО ЗА ЗАКАЗ</h4>
+                            <!-- <p></p> -->
+                        </div>
                     </div>
                         
                 </div>

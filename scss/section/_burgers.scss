@@ -116,6 +116,9 @@
     top: 0;
     left: 0;
     display: flex;
+    cursor: pointer;
+    z-index: 999;
+
 }
 
 .burgers__main-foto-top {
@@ -128,7 +131,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    
 }
 
 .burgers-ingredients-dropdown {
@@ -141,12 +144,25 @@
     border-radius: rem(5px);
     transition: opacity 0.4s;
     z-index: 1;
+    cursor: default;
     
     
 }
 
 
+.burgers-ingredients-dropdown__close {
+    position: absolute;
+    top: rem(8px);
+    right: rem(6px);
+    width: rem(18px);
+    height: rem(18px);
+    cursor: pointer;
+    display: none;
+    @include phones {
+        display: initial;
+    }
 
+}
 
 .burgers-ingredients-dropdown_active {
     position: static;
@@ -233,6 +249,7 @@
 .burgers-arrow-link {
     position: absolute;
     top: 50%;
+    z-index: 999;
 }
 
 .burgers-arrow-link_left {

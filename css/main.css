@@ -1222,6 +1222,16 @@ footer {
   text-transform: none;
   background: none; }
 
+.comments__popup {
+  display: none;
+  width: 40%; }
+
+.success {
+  color: green; }
+
+.error {
+  color: red; }
+
 .menu {
   background-image: url("/img/content/menu/menu_bg.jpg");
   background-repeat: no-repeat;
@@ -1296,10 +1306,10 @@ footer {
   padding: 3.75rem 1.875rem;
   width: 100%;
   line-height: 1.8;
-  opacity: 1;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s; }
+  opacity: 0;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s; }
 
 .burgers {
   background: -webkit-gradient(linear, left top, left bottom, from(#f9b43b), color-stop(#eb8c38), to(#f9b43b));
@@ -1425,7 +1435,9 @@ footer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  cursor: pointer;
+  z-index: 999; }
 
 .burgers__main-foto-top {
   width: 5.625rem;
@@ -1448,8 +1460,7 @@ footer {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer; }
+  align-items: center; }
 
 .burgers-ingredients-dropdown {
   width: 16.875rem;
@@ -1460,7 +1471,20 @@ footer {
   -webkit-transition: opacity 0.4s;
   -o-transition: opacity 0.4s;
   transition: opacity 0.4s;
-  z-index: 1; }
+  z-index: 1;
+  cursor: default; }
+
+.burgers-ingredients-dropdown__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.375rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  cursor: pointer;
+  display: none; }
+  @media screen and (max-width: 480px) {
+    .burgers-ingredients-dropdown__close {
+      display: initial; } }
 
 .burgers-ingredients-dropdown_active {
   position: static;
@@ -1547,7 +1571,8 @@ footer {
 
 .burgers-arrow-link {
   position: absolute;
-  top: 50%; }
+  top: 50%;
+  z-index: 999; }
 
 .burgers-arrow-link_left {
   left: -2.5rem; }

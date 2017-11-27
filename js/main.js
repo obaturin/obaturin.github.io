@@ -1,126 +1,117 @@
+// one page scroll
+
 $(function() {
     
-        const display = $('.maincontent');
-        const sections = $('.section');
+    const display = $('.maincontent');
+    const sections = $('.section');
+
+    let inScroll = false;
+
+    const mobileDetect = new MobileDetect(window.navigator.userAgent);
+    const isMobile = mobileDetect.mobile();
+
+    const switchMenuActiveClass = sectionEq => {
+        $('.vertical-nav__item').eq(sectionEq).addClass('vertical-nav__item_active')
+            .siblings().removeClass('vertical-nav__item_active');
+    }
+
+    const performTransition = sectionEq => {
+        if (inScroll == true) return 
+        inScroll = true
+
+        const position = (sectionEq * -100) + '%';
     
-        let inScroll = false;
-    
-        const mobileDetect = new MobileDetect(window.navigator.userAgent);
-        const isMobile = mobileDetect.mobile();
-    
-        const switchMenuActiveClass = sectionEq => {
-            $('.vertical-nav__item').eq(sectionEq).addClass('vertical-nav__item_active')
-                .siblings().removeClass('vertical-nav__item_active');
-        }
-    
-        const performTransition = sectionEq => {
-            if (inScroll == true) return 
-            inScroll = true
-    
-            const position = (sectionEq * -100) + '%';
+        display.css({
+            'transform' : `translate(0, ${position})`,
+            '-webkit-transform' : `translate(0, ${position})`
+        })
+
+        sections.eq(sectionEq).addClass('active')
+            .siblings().removeClass('active');
         
-            display.css({
-                'transform' : `translate(0, ${position})`,
-                '-webkit-transform' : `translate(0, ${position})`
-            })
-    
-            sections.eq(sectionEq).addClass('active')
-                .siblings().removeClass('active');
-            
-            setTimeout(() => {
-                inScroll = false;
-                switchMenuActiveClass(sectionEq);
-            }, 1300);
+        setTimeout(() => {
+            inScroll = false;
+
+        }, 1300);
+        switchMenuActiveClass(sectionEq);
+    }
+
+    const difineSections = sections => {
+        const activeSection = sections.filter('.active');
+        return {
+            activeSection: activeSection,
+            nextSection: activeSection.next(),
+            prevSection: activeSection.prev()
         }
-    
-        const difineSections = sections => {
-            const activeSection = sections.filter('.active');
-            return {
-                activeSection: activeSection,
-                nextSection: activeSection.next(),
-                prevSection: activeSection.prev()
-            }
+    }
+
+    const scrollToSection = direction => {
+        const section = difineSections(sections)
+
+        if (inScroll) return;
+
+        if (direction === 'up' && section.nextSection.length) { // вниз
+            performTransition(section.nextSection.index())
         }
-    
-        const scrollToSection = direction => {
-            const section = difineSections(sections)
-    
-            if (inScroll) return;
-    
-            if (direction === 'up' && section.nextSection.length) { // вниз
-                performTransition(section.nextSection.index())
-            }
-    
-            if (direction === 'down' && section.prevSection.length) { // вверх
-                performTransition(section.prevSection.index())
-            }
+
+        if (direction === 'down' && section.prevSection.length) { // вверх
+            performTransition(section.prevSection.index())
         }
-    
-        $('.wrapper').on({
-            wheel: e => {
-              const deltaY = e.originalEvent.deltaY;
-              let direction = (deltaY > 0) 
-                ? 'up' 
-                : 'down'
-          
-              scrollToSection(direction);
-            },
-            touchmove: e => (e.preventDefault())
-          });
-    
-        $(document).on('keydown', e => {
-            const section = difineSections(sections);
-    
-            if (inScroll) return
-    
-            switch (e.keyCode) {
-                case 40:
-                    if (!section.nextSection.length) return;
-                    performTransition(section.nextSection.index());
-                    break;
-    
-                case 38:
-                    if (!section.prevSection.length) return;
-                    performTransition(section.prevSection.index());
-                    break;
-            }
-        });
-    
-        if (isMobile) {
-            $(window).swipe({
-              swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                // console.log(direction);
-                scrollToSection(direction);
-              }
-            })
-          }
+    }
+
+    $('.wrapper').on({
+        wheel: e => {
+            const deltaY = e.originalEvent.deltaY;
+            let direction = (deltaY > 0) 
+            ? 'up' 
+            : 'down'
         
-    
-        $('[data-scroll-to]').on('click touchstart', e => {
-            e.preventDefault();
-            const $this = $(e.currentTarget);
-            const sectionIndex = parseInt($this.attr('data-scroll-to'));
-    
-            performTransition(sectionIndex);
+            scrollToSection(direction);
+        },
+        touchmove: e => (e.preventDefault())
         });
+
+    $(document).on('keydown', e => {
+        const section = difineSections(sections);
+
+        if (inScroll) return
+
+        switch (e.keyCode) {
+            case 40:
+                if (!section.nextSection.length) return;
+                performTransition(section.nextSection.index());
+                break;
+
+            case 38:
+                if (!section.prevSection.length) return;
+                performTransition(section.prevSection.index());
+                break;
+        }
+    });
+
+    if (isMobile) {
+        $(window).swipe({
+            swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            // console.log(direction);
+            scrollToSection(direction);
+            }
+        })
+        }
     
+
+    $('[data-scroll-to]').on('click touchstart', e => {
+        e.preventDefault();
+        const $this = $(e.currentTarget);
+        const sectionIndex = parseInt($this.attr('data-scroll-to'));
+
+        performTransition(sectionIndex);
+    });
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    })
+})
     
 
 
-
+// Humbehreg menu
 
 $(function() {
     let hamburgerMenu = document.getElementById('toggle')
@@ -147,6 +138,9 @@ $(function() {
 	});
 
 })
+
+
+// Vertical acco
 
 $(function() {
     $('.team__trigger').on('click', e => {
@@ -189,6 +183,7 @@ $(function() {
 
 })
 
+// Horizontal acco
 
 $(function() {
     $('.menu-accordion__img').on('click', e => {
@@ -218,13 +213,35 @@ $(function() {
             item.addClass('active')
 
 
+            // setTimeout(function(){
+            //     textBlock.css({
+            //         'opacity' : 0
+            //     })
+                
+            // }, 700);
+            // setTimeout(function(){
+            //     otherContent.css({
+            //     'width' : 0
+            // })
+            // }, 100)
+            
             otherContent.css({
                 'width' : 0
             })
 
-            
+
+
+            setTimeout(function(){
+                textBlock.css({
+                    'opacity' : 1
+                })
+                
+            }, 700);
+
+
 
             // content.animate({
+                
             //     'width' : openWidth
             // }, 500, function() {
             //     textBlock.css({
@@ -236,26 +253,35 @@ $(function() {
             //     })
             // })
 
+
+
             content.css({
                 'width' : openWidth
             })
 
-            // setTimeout(function(){
-            //     textBlock.css({
-            //         'opacity' : 1
-            //     })
-            // }, 400);
+            
 
-
-        } else {
 
             
+        } else {
+
+            textBlock.css({
+                    'opacity' : 0
+                })
+
+
+            setTimeout(function(){
+                content.css({
+                'width' : 0
+            })
+            }, 700);
+
 
             item.removeClass('active');
 
-            content.css({
-                'width' : 0
-            })
+            
+
+            
 
             
             
@@ -267,6 +293,43 @@ $(function() {
 
 
 
+$(function() {
+    
+    let burgersHover = document.querySelector('.burgers__main-foto-top')
+    let dropdowm = document.querySelector('.burgers-ingredients-dropdown')
+    
+    // let crossBtn = document.querySelector('.close-ingrediets')
+    
+   
+
+    burgersHover.addEventListener('mouseover', e => {
+    // var
+        // $this = $(this),
+        // container = $this.closest('.burgers-wrapper'),
+        // items = container.find('.burgers__item'),
+        // activeItem = items.filter('.active'),
+        // dropdowm = activeItem.find('.burgers-ingredients-dropdown');
+ 
+
+        dropdowm.classList.add('burgers-ingredients-dropdown_active')
+        burgersHover.style.backgroundColor = "#e35028"
+    });
+    
+    // crossBtn.addEventListener('click', e => {
+    //     dropdowm.classList.remove('burgers-ingredients-dropdown_active')
+    // })
+    
+    burgersHover.addEventListener('mouseout', e => {
+        dropdowm.classList.remove('burgers-ingredients-dropdown_active')
+        burgersHover.style.backgroundColor = "#f08c33"
+    });  
+      
+
+})
+
+
+
+// Slider
 
 $(function() {
 
@@ -328,7 +391,7 @@ $(function() {
 
 
 
-
+// map
 
 $(function() {
   
